@@ -13,15 +13,19 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: "./tsconfig.json",
+    tsconfigRootDir: __dirname,
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: "latest",
-    sourceType: "module",
   },
 
   rules: {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-empty-interface": "off",
+    "testing-library/no-render-in-setup": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
   },
 };
